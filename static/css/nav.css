@@ -167,6 +167,7 @@ body {
   display: inline-block;
   padding: 0 11px;
   font-size: 14px;
+  font-weight: bold;
   line-height: 31px;
   border-radius: 3px 3px 0 0;
   cursor: pointer
