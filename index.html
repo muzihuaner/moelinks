@@ -1,1013 +1,1298 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-cmn-Hans">
 <head>
-	<title>萌链 - 你的二次元导航姬!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/muzihuaner/huancdn/img/favicon.ico" />
+    <title>萌链</title>
 	<meta charset="utf-8" />
-	<meta name="description" content="你的二次元导航姬!专注于收录二次元相关网站的动漫导航！让你获得更加简单快捷的动漫导航体验!" />
-	<meta name="keywords" content="萌链,MoeLinks,二次元导航,Moe导航,动漫网站大全,动漫导航,萌站,萌主页,宅网站" />
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/muzihuaner/huancdn/img/favicon.ico">
-	<link href="static/css/font-awesome.css" rel="stylesheet">
-	<link href="static/css/bootstrap-material-design.css" rel="stylesheet">
-	<link href="static/css/ripples.min.css" rel="stylesheet">
-	<link href="static/css/i.css" rel="stylesheet">
-	<link href="static/css/i-t.css" rel="stylesheet">
-	<link rel='stylesheet' id='nav-css' href='static/css/nav.css' type='text/css' media='all' />
-	<style>
-		#header .nav-search .container {
-			margin-top: 10px;
-			height: 300px;
-			/* background: url(https://cdn.jsdelivr.net/gh/muzihuaner/cdn@1.9/urlshorting/background.png); */
-			/* background-position: 100% 65%; */
-			background-size: 100%;
-			box-shadow: 0 0 15px rgba(100, 100, 100, 0.1);
-			overflow: hidden;
-			border-radius: 10px;
-			background-color: #FCE4EC;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-
-		@media screen and (max-width: 992px) {
-			#header .nav-search .container {
-				height: 280px;
-			}
-
-			#header .nav-search .container .count-time {
-				top: 120px !important;
-			}
-		}
-
-		@media screen and (max-width: 768px) {
-			#header .nav-search .container {
-				height: 220px;
-			}
-
-			#header .nav-search .container .count-time {
-				top: 80px !important;
-			}
-		}
-
-		@media screen and (max-width: 320px) {
-			#header .nav-search .container {
-				height: 180px;
-			}
-
-			#header .nav-search .container .count-time {
-				top: 40px !important;
-			}
-		}
-
-		#header .nav-search .container .count-time {
-			position: absolute;
-			top: 380px;
-			/* left: calc(50% - 150px); */
-			padding: 10px 0;
-			width: 100%;
-			/* border-radius: 35px; */
-			background: rgba(255, 255, 255, 0.83);
-			box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
-			color: rgb(132, 218, 238);
-			text-align: center;
-			font-size: 15px;
-			z-index: 1;
-		}
-
-		body {
-			margin: 0;
-			background: url(https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images);
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-			background-attachment: fixed;
-		}
-
-		.item-one .naicon:before {
-			content: "";
-			display: inline-block;
-			padding-bottom: 100%;
-			width: 0.1px;
-			/*必须要有数值，否则无法把高度撑起来*/
-			vertical-align: middle;
-		}
-
-		.item-one .nicon img {
-			width: 100%;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
-			/*z-index: -1;*/
-		}
-
-		.xm {
-			position: fixed;
-			bottom: 0;
-			left: initial;
-			right: 0;
-			z-index: 1;
-			font-size: 0;
-			-webkit-transition: all .3s ease-in-out;
-			transition: all .3s ease-in-out;
-			-webkit-transform: translateY(3px);
-			-ms-transform: translateY(3px);
-			transform: translateY(3px);
-		}
-
-		.xm img {
-			width: 100px;
-		}
-
-		#clipArea {
-			height: 300px;
-		}
-
-		#file,
-		#clipBtn {
-			margin: 20px;
-		}
-
-		#view {
-			margin: 0 auto;
-			width: 200px;
-			height: 200px;
-			background-color: #666;
-		}
-	</style>
-	<!-- 网站统计 -->
-	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-	<script>
-		LA.init({
-			id: 'JE9LIFX0XepROQ4v'
-		})
-	</script>
+	<meta name="description" content="简单的导航!" />
+	<meta name="keywords" content="导航" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/slinky.css" />
 </head>
-
 <body>
-	<div id="header">
-		
-			
-			<div class="nav-search">
-				<h1 class="title" align="center" style="color:#F06292 ; font-size:50px">MoeLinks-萌链</h1>
-				<div class="container">
-				<!--搜索框-->
-				<div id="search" class="s-search">
-					<div id="search-list" class="hide-type-list">
-						<div class="s-type"> <span></span>
-							<div class="s-type-list animated fadeInUp">
-								<label for="type-baidu">常用</label>
-								<label for="type-search">搜索</label>
-								<label for="type-zhihu">社区</label>
-								<label for="type-taobao1">生活</label>
-								<label for="type-baiduxue">工具</label>
-							</div>
-						</div>
-						<div class="search-group group-a"> <span class="type-text">常用</span>
-							<ul class="search-type">
-								<li>
-									<input checked hidden type="radio" name="type" id="type-baidu"
-										value="https://www.baidu.com/s?wd=" data-placeholder="搜索本站(Ctrl+F) & 切换搜索来源 ↑ ">
-									<label for="type-baidu"> <span style="color:#0084ff">百度</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-google"
-										value="https://www.google.com/search?q=" data-placeholder="著名404网站，自己想办法访问哦！">
-									<label for="type-google"> <span style="color:#3B83FA">G</span> <span
-											style="color:#F3442C">o</span> <span style="color:#FFC300">o</span> <span
-											style="color:#4696F8">g</span> <span style="color:#2CAB4E">l</span> <span
-											style="color:#F54231">e</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-music"
-										value="http://tool.liumingye.cn/music/?page=audioPage&type=YQD&name="
-										data-placeholder="音乐搜索下载">
-									<label for="type-music"> <span style="color:#007daa">音乐</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-dianying"
-										value="https://www.pianku.li/s/go.php?q=" data-placeholder="电影搜索">
-									<label for="type-dianying"> <span style="color:#f40">影视</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-快递100-1"
-										value="https://m.kuaidihelp.com/express/queryResult?word="
-										data-placeholder="输入快递单号">
-									<label for="type-快递100-1"> <span style="color:#3278e6">查快递</span> </label>
-								</li>
-							</ul>
-						</div>
-						<div class="search-group group-b"> <span class="type-text">搜索</span>
-							<ul class="search-type">
-								<li>
-									<input hidden type="radio" name="type" id="type-search"
-										value="https://www.baidu.com/s?wd=" data-placeholder="百度一下">
-									<label for="type-search"> <span style="color:#0084ff">百度</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-google1"
-										value="https://www.google.com/search?q=" data-placeholder="谷歌两下">
-									<label for="type-google1"> <span style="color:#3B83FA">G</span> <span
-											style="color:#F3442C">o</span> <span style="color:#FFC300">o</span> <span
-											style="color:#4696F8">g</span> <span style="color:#2CAB4E">l</span> <span
-											style="color:#F54231">e</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-360" value="https://www.so.com/s?q="
-										data-placeholder="360好搜">
-									<label for="type-360"> <span style="color:#19b955">360</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-sogo"
-										value="https://www.sogou.com/web?query=" data-placeholder="搜狗搜索">
-									<label for="type-sogo"> <span style="color:#ff5943">搜狗</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-bing"
-										value="https://cn.bing.com/search?q=" data-placeholder="微软Bing搜索">
-									<label for="type-bing"> <span style="color:#007daa">Bing</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-sm" value="https://quark.sm.cn/s?q="
-										data-placeholder="夸克AI搜索">
-									<label for="type-sm"> <span style="color:#ff8608">夸克</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-yandex"
-										value="https://yandex.com/search/?text=" data-placeholder="俄罗斯搜索引擎">
-									<label for="type-yandex"> <span style="color:#DC143C">Yandex</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-toutiao"
-										value="https://m.toutiao.com/search?keyword=" data-placeholder="干掉百度？">
-									<label for="type-toutiao"> <span style="color:#ce2849">头条</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-duoji"
-										value="https://www.dogedoge.com/results?q=" data-placeholder="不追踪，不误导。">
-									<label for="type-duoji"> <span style="color:#e7bf1c">多吉</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-duckgo"
-										value="https://duckduckgo.com/?q=" data-placeholder="隐私保护，化繁为简。">
-									<label for="type-duckgo"> <span style="color:#43ae1f">DuckGo</span> </label>
-								</li>
-							</ul>
-						</div>
-						<div class="search-group group-d"> <span class="type-text">社区</span>
-							<ul class="search-type">
-								<li>
-									<input hidden type="radio" name="type" id="type-zhihu"
-										value="https://www.zhihu.com/search?type=content&q=" data-placeholder="知乎">
-									<label for="type-zhihu"> <span style="color:#0084ff">知乎</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-wechat"
-										value="http://weixin.sogou.com/weixin?type=2&query=" data-placeholder="微信">
-									<label for="type-wechat"> <span style="color:#00a06a">微信</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-weibo"
-										value="http://s.weibo.com/weibo/" data-placeholder="微博">
-									<label for="type-weibo"> <span style="color:#e6162d">微博</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-douban"
-										value="https://www.douban.com/search?q=" data-placeholder="豆瓣">
-									<label for="type-douban"> <span style="color:#55a300">豆瓣</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-bilibili"
-										value="https://search.bilibili.com/all?keyword=" data-placeholder="哔哩哔哩">
-									<label for="type-bilibili"> <span style="color:#ca4286">Bilibili</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-github"
-										value="https://github.com/search?q=" data-placeholder="程序员社区">
-									<label for="type-github"> <span style="color:#000000">Github</span> </label>
-								</li>
-							</ul>
-						</div>
-						<div class="search-group group-e"> <span class="type-text">生活</span>
-							<ul class="search-type">
-								<li>
-									<input hidden type="radio" name="type" id="type-taobao1"
-										value="https://s.taobao.com/search?q=" data-placeholder="淘宝">
-									<label for="type-taobao1"> <span style="color:#f40">淘宝</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-jd"
-										value="https://search.jd.com/Search?keyword=" data-placeholder="京东">
-									<label for="type-jd"> <span style="color:#c91623">京东</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-xiachufang"
-										value="http://www.xiachufang.com/search/?keyword=" data-placeholder="搜索菜谱、食材">
-									<label for="type-xiachufang"> <span style="color:#dd3915">下厨房</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-xiangha"
-										value="https://www.tianyancha.com/search?key="
-										data-placeholder="请输入公司名称、老板姓名、品牌名称等">
-									<label for="type-xiangha"> <span style="color:#930">天眼查</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-快递100"
-										value="https://m.kuaidihelp.com/express/queryResult?word="
-										data-placeholder="输入快递单号">
-									<label for="type-快递100"> <span style="color:#3278e6">查快递</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-qunar"
-										value="https://travelsearch.fliggy.com/index.htm?searchType=product&keyword="
-										data-placeholder="目的地/酒店/景点/签证等">
-									<label for="type-qunar"> <span style="color:#00afc7">飞猪</span> </label>
-								</li>
-							</ul>
-						</div>
-						<div class="search-group group-f"> <span class="type-text">工具</span>
-							<ul class="search-type">
-								<li>
-									<input hidden type="radio" name="type" id="type-baiduxue"
-										value="http://xueshu.baidu.com/s?wd=" data-placeholder="请输入关键字">
-									<label for="type-baiduxue"> <span style="color:#689fee">百度学术</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-baidubaike"
-										value="https://baike.baidu.com/item/" data-placeholder="请输入词条">
-									<label for="type-baidubaike"> <span style="color:#689fee">百度百科</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-apk"
-										value="https://sj.qq.com/myapp/search.htm?kw=" data-placeholder="请输入安卓应用名称">
-									<label for="type-apk"> <span style="color:#ff6000">安卓软件</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-exe"
-										value="https://pc.qq.com/search.html#!keyword=" data-placeholder="请输入PC应用名称">
-									<label for="type-exe"> <span style="color:#00b38a">PC软件</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-tu"
-										value="https://cn.bing.com/images/search?q=" data-placeholder="请输入关键字">
-									<label for="type-tu"> <span style="color:#00ff26">图片</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-map"
-										value="http://ditu.amap.com/search?query==" data-placeholder="请输入地点">
-									<label for="type-map"> <span style="color:#0015ff">地图</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-fanyi"
-										value="https://translate.google.cn/#view=home&op=translate&sl=auto&tl=zh-CN&text="
-										data-placeholder="请输入词汇或句子">
-									<label for="type-fanyi"> <span style="color:#ff0000">翻译</span> </label>
-								</li>
-								<li>
-									<input hidden type="radio" name="type" id="type-baidukaifa"
-										value="https://kaifa.baidu.com/searchPage?wd=" data-placeholder="请输入开发时遇到的问题">
-									<label for="type-baidukaifa"> <span style="color:#130e5a">开发者</span> </label>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<form action="?s=" method="get" target="_blank" id="super-search-fm">
-						<input type="text" id="search-text" placeholder="输入关键字搜索" style="outline:0">
-						<button type="submit"> <i class="fa fa-search "></i> </button>
-					</form>
-					<div class="set-check hidden-xs">
-						<input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
-					</div>
-					
-				
-				</div>
-			</div>
-			<script type="text/javascript">
-				eval(function (e, t, a, c, i, n) {
-					if (i = function (e) {
-						return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(36))
-					}, !"".replace(/^/, String)) {
-						for (; a--;) n[i(a)] = c[a] || i(a);
-						c = [function (e) {
-							return n[e]
-						}], i = function () {
-							return "\\w+"
-						}, a = 1
-					}
-					for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
-					return e
-				}('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();',
-					62, 77,
-					"||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute"
-						.split("|"), 0, {}));
-			</script>
-			<!--搜索框结束-->
-			<!--
-  <div class="container">
-    <div class="ss">
-      <form class="search" id="S" action="//www.baidu.com/s" method="GET" target="_blank">
-        <input type="search" placeholder="请在这里输入关键词搜索╮(￣▽￣)╭" name="wd" class="search-input">
-        <button type="submit" class="search-button btn" data-ripple><i class="fa fa-search"></i></button>
-      </form>
+   
+    <!-- 搜索引擎 -->
+    <div class="search-engine">
+        <h1 class="title" align="center" style="color:#ffffff ; font-size:50px">MoeLinks-萌链</h1><br><br>
+        <!-- 搜索栏 -->
+        <div class="search-engine-bar">
+            <input id="search-engine-input" type="text" placeholder="输入关键词进行搜索" onkeydown="if (event.keyCode == 13) {searchWeb();}" />
+            <svg class="search-engine-submit" viewbox="0 0 24 24" onclick="searchWeb()">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+        </div>
+        <!-- 搜索引擎选择 -->
+        <div class="search-engine-select">
+            <ul>
+                <li onclick="setSearchEngine('baidu')">
+                    <input type="radio" name="search-engine-selection" id="search-engine-baidu" checked />
+                    <label for="search-engine-baidu">百度</label>
+                </li>
+                <li onclick="setSearchEngine('bing')">
+                    <input type="radio" name="search-engine-selection" id="search-engine-bing" />
+                    <label for="search-engine-bing">Bing</label>
+                </li>
+                <li onclick="setSearchEngine('google')">
+                    <input type="radio" name="search-engine-selection" id="search-engine-google" />
+                    <label for="search-engine-google">Google</label>
+                </li>
+                <li onclick="setSearchEngine('bilibili')">
+                    <input type="radio" name="search-engine-selection" id="search-engine-bilibili" />
+                    <label for="search-engine-bilibili">bilibili</label>
+                </li>
+            </ul>
+        </div>
     </div>
--->
-		</div>
-	</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">视频&amp;弹幕</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="36"> <a href="https://www.bilibili.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="Bilibili"
-							data-url="https://www.bilibili.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.bilibili.com"> </div>
-					</a>
-					<p>Bilibili</p>
-				</div>
-				<div class="nicon" id="37"> <a href="http://www.acfun.cn/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="AcFun"
-							data-url="http://www.acfun.cn/"> <img src="https://www.google.cn/s2/favicons?domain=www.acfun.cn">
-						</div>
-					</a>
-					<p>AcFun</p>
-				</div>
-				<div class="nicon" id="38"> <a href="https://www.iqiyi.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="爱奇艺"
-							data-url="https://www.iqiyi.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.iqiyi.com">
-						</div>
-					</a>
-					<p>爱奇艺</p>
-				</div>
-				<div class="nicon" id="39"> <a href="http://www.nicovideo.jp/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="NicoNico"
-							data-url="http://www.nicovideo.jp/"> <img src="https://www.google.cn/s2/favicons?domain=nicovideo.jp">
-						</div>
-					</a>
-					<p>NicoNico</p>
-				</div>
-				<div class="nicon" id="40"> <a href="http://www.dilidili.wang/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="嘀哩嘀哩"
-							data-url="http://www.dilidili.wang/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.dilidili.wang"> </div>
-					</a>
-					<p>嘀哩嘀哩</p>
-				</div>
-				<div class="nicon" id="41"> <a href="https://anime.upupoo.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="啊噗猫"
-							data-url="https://anime.upupoo.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=anime.upupoo.com"> </div>
-					</a>
-					<p>啊噗猫</p>
-				</div>
-				<div class="nicon" id="42"> <a href="https://neets.cc/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="Neets追剧"
-							data-url="https://neets.cc/"> <img src="https://www.google.cn/s2/favicons?domain=neets.cc"> </div>
-					</a>
-					<p>Neets追剧</p>
-				</div>
-				<div class="nicon" id="43"> <a href="https://v.qq.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="腾讯视频" data-url="https://v.qq.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=v.qq.com"> </div>
-					</a>
-					<p>腾讯视频</p>
-				</div>
-				<div class="nicon" id="45"> <a href="https://www.youtube.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="油管"
-							data-url="https://www.youtube.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.youtube.com">
-						</div>
-					</a>
-					<p>油管</p>
-				</div>
-				<div class="nicon" id="54"> <a href="https://www.youku.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="11" data-title="优酷"
-							data-url="https://www.youku.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.youku.com">
-						</div>
-					</a>
-					<p>优酷</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">音乐&amp;来至二次元的声音</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="72"> <a href="https://music.163.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="云音乐"
-							data-url="https://music.163.com/"> <img src="https://www.google.cn/s2/favicons?domain=music.163.com">
-						</div>
-					</a>
-					<p>云音乐</p>
-				</div>
-				<div class="nicon" id="73"> <a href="http://www.huanmusic.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="幻音音乐"
-							data-url="http://www.huanmusic.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.huanmusic.com"> </div>
-					</a>
-					<p>幻音音乐</p>
-				</div>
-				<div class="nicon" id="74"> <a href="http://www.missevan.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="M站"
-							data-url="http://www.missevan.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.missevan.com">
-						</div>
-					</a>
-					<p>M站</p>
-				</div>
-				<div class="nicon" id="75"> <a href="https://biu.moe/#/Index/home" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="Biu~"
-							data-url="https://biu.moe/#/Index/home"> <img
-								src="https://www.google.cn/s2/favicons?domain=biu.moe"> </div>
-					</a>
-					<p>Biu~</p>
-				</div>
-				<div class="nicon" id="76"> <a href="http://www.kugou.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="酷狗"
-							data-url="http://www.kugou.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.kugou.com">
-						</div>
-					</a>
-					<p>酷狗</p>
-				</div>
-				<div class="nicon" id="77"> <a href="https://y.qq.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="QQ音乐" data-url="https://y.qq.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=y.qq.com"> </div>
-					</a>
-					<p>QQ音乐</p>
-				</div>
-				<div class="nicon" id="78"> <a href="http://5sing.kugou.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="5sing"
-							data-url="http://5sing.kugou.com/"> <img src="https://www.google.cn/s2/favicons?domain=5sing.kugou.com">
-						</div>
-					</a>
-					<p>5sing</p>
-				</div>
-				<div class="nicon" id="79"> <a href="http://www.kuwo.cn/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="酷我音乐"
-							data-url="http://www.kuwo.cn/"> <img src="https://www.google.cn/s2/favicons?domain=www.kuwo.cn">
-						</div>
-					</a>
-					<p>酷我音乐</p>
-				</div>
-				<div class="nicon" id="80"> <a href="https://sacdr.net/forum.php" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="易音音乐"
-							data-url="https://sacdr.net/forum.php"> <img
-								src="https://www.google.cn/s2/favicons?domain=sacdr.net"> </div>
-					</a>
-					<p>易音音乐</p>
-				</div>
-				<div class="nicon" id="81"> <a href="http://www.acgjc.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="14" data-title="漫音社"
-							data-url="http://www.acgjc.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.acgjc.com">
-						</div>
-					</a>
-					<p>漫音社</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">直播</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="12"> <a href="https://live.bilibili.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="bilibili直播"
-							data-url="https://live.bilibili.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=live.bilibili.com"> </div>
-					</a>
-					<p>bilibili直播</p>
-				</div>
-				<div class="nicon" id="13"> <a href="https://www.douyu.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="斗鱼"
-							data-url="https://www.douyu.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.douyu.com">
-						</div>
-					</a>
-					<p>斗鱼</p>
-				</div>
-				<div class="nicon" id="14"> <a href="https://www.huya.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="虎牙"
-							data-url="https://www.huya.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.huya.com">
-						</div>
-					</a>
-					<p>虎牙</p>
-				</div>
-				<div class="nicon" id="15"> <a href="http://www.twitch.tv" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="Twitch"
-							data-url="http://www.twitch.tv/"> <img src="https://www.google.cn/s2/favicons?domain=www.twitch.tv">
-						</div>
-					</a>
-					<p>Twitch</p>
-				</div>
-				<div class="nicon" id="16"> <a href="http://www.longzhu.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="龙珠直播"
-							data-url="http://www.longzhu.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.longzhu.com">
-						</div>
-					</a>
-					<p>龙珠直播</p>
-				</div>
-				<div class="nicon" id="17"> <a href="http://www.yy.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="YY" data-url="http://www.yy.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=www.yy.com"> </div>
-					</a>
-					<p>YY</p>
-				</div>
-				<div class="nicon" id="18"> <a href="https://www.zhanqi.tv/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="战旗直播"
-							data-url="https://www.zhanqi.tv/"> <img src="https://www.google.cn/s2/favicons?domain=www.zhanqi.tv">
-						</div>
-					</a>
-					<p>战旗直播</p>
-				</div>
-				<div class="nicon" id="20"> <a href="https://www.huomao.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="火猫直播"
-							data-url="https://www.huomao.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.huomao.com">
-						</div>
-					</a>
-					<p>火猫直播</p>
-				</div>
-				<div class="nicon" id="21"> <a href="http://egame.qq.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="8" data-title="企鹅电竞"
-							data-url="http://egame.qq.com/"> <img src="https://www.google.cn/s2/favicons?domain=egame.qq.com">
-						</div>
-					</a>
-					<p>企鹅电竞</p>
-				</div>
-				<div class="nicon" id="22"> <a href="https://cc.163.com/" target="_blank">
-					<div class="naicon btn btn-raised" data-tid="8" data-title="网易CC"
-						data-url="https://cc.163.com/"> <img src="https://www.google.cn/s2/favicons?domain=cc.163.com">
-					</div>
-				</a>
-				<p>网易CC</p>
-			</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">小说读物&amp;幻想的世界</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="19"> <a href="https://www.qidian.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="起点"
-							data-url="https://www.qidian.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.qidian.com">
-						</div>
-					</a>
-					<p>起点</p>
-				</div>
-				<div class="nicon" id="22"> <a href="http://www.jjwxc.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="晋江文学"
-							data-url="http://www.jjwxc.net/"> <img src="https://www.google.cn/s2/favicons?domain=www.jjwxc.net">
-						</div>
-					</a>
-					<p>晋江文学</p>
-				</div>
-				<div class="nicon" id="23"> <a href="https://www.zhuishushenqi.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="追书神器"
-							data-url="https://www.zhuishushenqi.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.zhuishushenqi.com"> </div>
-					</a>
-					<p>追书神器</p>
-				</div>
-				<div class="nicon" id="24"> <a href="https://www.linovel.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="轻之文库"
-							data-url="https://www.linovel.net/"> <img src="https://www.google.cn/s2/favicons?domain=www.linovel.net">
-						</div>
-					</a>
-					<p>轻之文库</p>
-				</div>
-				<div class="nicon" id="25"> <a href="http://book.sfacg.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="SF轻小说"
-							data-url="http://book.sfacg.com/"> <img src="https://www.google.cn/s2/favicons?domain=book.sfacg.com">
-						</div>
-					</a>
-					<p>SF轻小说</p>
-				</div>
-				<div class="nicon" id="26"> <a href="http://www.u17.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="有妖气" data-url="http://www.u17.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=www.u17.com"> </div>
-					</a>
-					<p>有妖气</p>
-				</div>
-				<div class="nicon" id="27"> <a href="http://baozoumanhua.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="暴走漫画"
-							data-url="http://baozoumanhua.com/"> <img src="https://www.google.cn/s2/favicons?domain=baozoumanhua.com">
-						</div>
-					</a>
-					<p>暴走漫画</p>
-				</div>
-				<div class="nicon" id="28"> <a href="https://www.zymk.cn/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="知音漫客"
-							data-url="https://www.zymk.cn/"> <img src="https://www.google.cn/s2/favicons?domain=www.zymk.cn">
-						</div>
-					</a>
-					<p>知音漫客</p>
-				</div>
-				<div class="nicon" id="44"> <a href="http://www.chumanapp.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="触漫"
-							data-url="http://www.chumanapp.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.chumanapp.com"> </div>
-					</a>
-					<p>触漫</p>
-				</div>
-				<div class="nicon" id="70"> <a href="https://www.bearead.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="9" data-title="白熊阅读"
-							data-url="https://www.bearead.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=https://www.bearead.com/"> </div>
-					</a>
-					<p>白熊阅读</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">社区 - 交流讨论&amp;嘴强王者</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="56"> <a href="https://tieba.baidu.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="贴吧"
-							data-url="https://tieba.baidu.com/"> <img src="https://www.google.cn/s2/favicons?domain=tieba.baidu.com">
-						</div>
-					</a>
-					<p>贴吧</p>
-				</div>
-				<div class="nicon" id="57"> <a href="https://www.zhihu.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="知乎"
-							data-url="https://www.zhihu.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.zhihu.com/">
-						</div>
-					</a>
-					<p>知乎</p>
-				</div>
-				<div class="nicon" id="58"> <a href="https://weibo.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="微博" data-url="https://weibo.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=weibo.com"> </div>
-					</a>
-					<p>微博</p>
-				</div>
-				<div class="nicon" id="59"> <a href="https://twitter.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="Twitter"
-							data-url="https://twitter.com/"> <img src="https://www.google.cn/s2/favicons?domain=twitter.com">
-						</div>
-					</a>
-					<p>Twitter</p>
-				</div>
-				<div class="nicon" id="60"> <a href="https://www.facebook.com" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="Facebook"
-							data-url="https://www.facebook.com"> <img src="https://www.google.cn/s2/favicons?domain=www.facebook.com">
-						</div>
-					</a>
-					<p>Facebook</p>
-				</div>
-				<div class="nicon" id="61"> <a href="https://www.tumblr.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="Tumblr"
-							data-url="https://www.tumblr.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.tumblr.com">
-						</div>
-					</a>
-					<p>Tumblr</p>
-				</div>
-				<div class="nicon" id="62"> <a href="https://pawoo.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="Pawoo"
-							data-url="https://pawoo.net/"> <img src="https://www.google.cn/s2/favicons?domain=pawoo.net">
-						</div>
-					</a>
-					<p>Pawoo</p>
-				</div>
-				<div class="nicon" id="67"> <a href="https://bcy.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="半次元" data-url="https://bcy.net/">
-							<img src="https://www.google.cn/s2/favicons?domain=bcy.net"> </div>
-					</a>
-					<p>半次元</p>
-				</div>
-				<div class="nicon" id="68"> <a href="https://www.qiushibaike.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="糗事百科"
-							data-url="https://www.qiushibaike.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.qiushibaike.com"> </div>
-					</a>
-					<p>糗事百科</p>
-				</div>
-				<div class="nicon" id="69"> <a href="https://telegram.org/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="13" data-title="Telegram"
-							data-url="https://telegram.org/"> <img src="https://www.google.cn/s2/favicons?domain=telegram.org">
-						</div>
-					</a>
-					<p>Telegram</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">购物&amp;在线剁手</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="29"> <a href="https://www.taobao.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="淘宝"
-							data-url="https://www.taobao.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.taobao.com">
-						</div>
-					</a>
-					<p>淘宝</p>
-				</div>
-				<div class="nicon" id="30"> <a href="https://www.tmall.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="天猫"
-							data-url="https://www.tmall.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.tmall.com">
-						</div>
-					</a>
-					<p>天猫</p>
-				</div>
-				<div class="nicon" id="31"> <a href="https://www.jd.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="京东" data-url="https://www.jd.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=www.jd.com"> </div>
-					</a>
-					<p>京东</p>
-				</div>
-				<div class="nicon" id="32"> <a href="https://www.amazon.cn/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="亚马逊"
-							data-url="https://www.amazon.cn/"> <img src="https://www.google.cn/s2/favicons?domain=www.amazon.cn">
-						</div>
-					</a>
-					<p>亚马逊</p>
-				</div>
-				<div class="nicon" id="33"> <a href="https://www.suning.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="苏宁易购"
-							data-url="https://www.suning.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.suning.com">
-						</div>
-					</a>
-					<p>苏宁易购</p>
-				</div>
-				<div class="nicon" id="34"> <a href="https://www.030buy.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="萌购"
-							data-url="https://www.030buy.net/"> <img src="https://www.google.cn/s2/favicons?domain=www.030buy.net">
-						</div>
-					</a>
-					<p>萌购</p>
-				</div>
-				<div class="nicon" id="35"> <a href="https://www.alipay.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="支付宝"
-							data-url="https://www.alipay.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.alipay.com">
-						</div>
-					</a>
-					<p>支付宝</p>
-				</div>
-				<div class="nicon" id="64"> <a href="http://www.dangdang.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="当当"
-							data-url="http://www.dangdang.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.dangdang.com">
-						</div>
-					</a>
-					<p>当当</p>
-				</div>
-				<div class="nicon" id="65"> <a href="https://www.gome.com.cn" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="10" data-title="国美"
-							data-url="https://www.gome.com.cn"> <img src="https://www.google.cn/s2/favicons?domain=https://www.gome.com.cn">
-						</div>
-					</a>
-					<p>国美</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">下载&amp;资源库</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="47"> <a href="https://share.dmhy.org/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="动漫花园"
-							data-url="https://share.dmhy.org/"> <img src="https://www.google.cn/s2/favicons?domain=share.dmhy.org">
-						</div>
-					</a>
-					<p>动漫花园</p>
-				</div>
-				<div class="nicon" id="48"> <a href="http://www.kisssub.org/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="爱恋动漫BT"
-							data-url="http://www.kisssub.org/"> <img src="https://www.google.cn/s2/favicons?domain=www.kisssub.org">
-						</div>
-					</a>
-					<p>爱恋动漫BT</p>
-				</div>
-				<div class="nicon" id="49"> <a href="https://cangku.moe/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="绅士仓库"
-							data-url="https://cangku.moe/"> <img src="https://www.google.cn/s2/favicons?domain=cangku.moe">
-						</div>
-					</a>
-					<p>绅士仓库</p>
-				</div>
-				<div class="nicon" id="50"> <a href="https://blog.reimu.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="灵梦御所"
-							data-url="https://blog.reimu.net/"> <img src="https://www.google.cn/s2/favicons?domain=blog.reimu.net">
-						</div>
-					</a>
-					<p>灵梦御所</p>
-				</div>
-				<div class="nicon" id="51"> <a href="https://www.tianshie.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="天使2次元"
-							data-url="https://www.tianshie.com/"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.tianshie.com"> </div>
-					</a>
-					<p>天使2次元</p>
-				</div>
-				<div class="nicon" id="52"> <a href="http://gaoqing.la/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="高清电影"
-							data-url="http://gaoqing.la/"> <img src="https://www.google.cn/s2/favicons?domain=gaoqing.la">
-						</div>
-					</a>
-					<p>高清电影</p>
-				</div>
-				<div class="nicon" id="53"> <a href="http://zhuixinfan.com/main.php" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="日剧追番"
-							data-url="http://zhuixinfan.com/main.php"> <img
-								src="https://www.google.cn/s2/favicons?domain=zhuixinfan.com"> </div>
-					</a>
-					<p>日剧追番</p>
-				</div>
-				<div class="nicon" id="55"> <a
-						href="http://www.zimuxia.cn/%E6%88%91%E4%BB%AC%E7%9A%84%E4%BD%9C%E5%93%81" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="FIX字幕"
-							data-url="http://www.zimuxia.cn/%E6%88%91%E4%BB%AC%E7%9A%84%E4%BD%9C%E5%93%81"> <img
-								src="https://www.google.cn/s2/favicons?domain=www.zimuxia.cn"> </div>
-					</a>
-					<p>FIX字幕</p>
-				</div>
-				<div class="nicon" id="63"> <a href="https://www.3dmgame.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="3DM"
-							data-url="https://www.3dmgame.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.3dmgame.com">
-						</div>
-					</a>
-					<p>3DM</p>
-				</div>
-				<div class="nicon" id="71"> <a href="http://www.ali213.net/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="12" data-title="游侠网"
-							data-url="http://www.ali213.net/"> <img src="https://www.google.cn/s2/favicons?domain=www.ali213.net">
-						</div>
-					</a>
-					<p>游侠网</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">工具&amp;黑科技</p>
-			</div>
-			<div class="navi">
-				<div class="nicon" id="1"> <a href="http://www.wufuba.cn/demo/mengma/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="1" data-title="颜表情" data-url="http://mengma.moe/">
-							<img src="https://www.google.cn/s2/favicons?domain=www.wufuba.cn"> </div>
-					</a>
-					<p>颜表情</p>
-				</div>
-				<div class="nicon" id="9"> <a href="https://drrr.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="1" data-title="DRRR" data-url="https://drrr.com/">
-							<img src="https://www.google.cn/s2/favicons?domain=drrr.com"> </div>
-					</a>
-					<p>DRRR</p>
-				</div>
-				<div class="nicon" id="10"> <a href="https://whatanime.ga/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="1" data-title="看图识番"
-							data-url="https://whatanime.ga/"> <img src="https://www.google.cn/s2/favicons?domain=whatanime.ga">
-						</div>
-					</a>
-					<p>看图识番</p>
-				</div>
-				<div class="nicon" id="11"> <a href="http://www.bee-ji.com/" target="_blank">
-						<div class="naicon btn btn-raised" data-tid="1" data-title="表情包"
-							data-url="http://www.bee-ji.com/"> <img src="https://www.google.cn/s2/favicons?domain=www.bee-ji.com">
-						</div>
-					</a>
-					<p>表情包</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navigation">
-		<div class="container item-one">
-			<div class="tool">
-				<p class="add-info">友情链接</p>
-				<div> <a class="fa fa-plus btn orAdd" href="javascript:void(0)" onClick="addFriends()"
-						style="display: none;"></a> </div>
-			</div>
-			<div class="nicon" id="11"> <a href="https://quickso.cn/" target="_blank">
-					<div class="naicon btn btn-raised" data-tid="1" data-title="快点搜" data-url="https://quickso.cn/">
-						<img src="https://cdn.jsdelivr.net/gh/muzihuaner/huancdn/img/favicon.ico"> </div>
-				</a>
-				<p>快点搜</p>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		<p style="text-align:center;"> 萌链·次元导航，ACG第一站，二次元导航之门，收藏我的二次元(づ￣ 3￣)づ<br><br>
+    <!-- 链接列表 -->
+    <main>
+        <!--
+        增加一个大类
+        1. 修改 id="list_ID" 中的“ID”
+        2. 修改 JavaScript 中的“ListCountMax”
+        3. “ID”根据列表数量顺延
+        <section>
+            <h2>一级标题</h2>
+            <div id="list_ID">
+                <ul>
+                    <li>
+                        <a href="#">二级标题</a>
+                        <ul>
+                            <li><a href="链接">链接标题</a></li>
+                            <li><a href="链接">链接标题</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="链接">链接标题</a></li>
+                </ul>
+            </div>
+        </section>
+        -->
+        <section>
+            <h2>百科 / 教程 / 科普 / 资料</h2>
+            <div id="list_1">
+                <ul>
+                    <li>
+                        <a href="#">百科</a>
+                        <ul>
+                            <li><a href="https://baike.baidu.com/">百度百科</a></li>
+                            <li><a href="https://ipaperclip.net/">回形针手册</a></li>
+                            <li><a href="https://zh.moegirl.org/">萌娘百科</a></li>
+                            <li><a href="https://zh.wikipedia.org/">维基百科</a></li>
+                            <li>
+                                <a href="#">Unicode®字符百科</a>
+                                <ul>
+                                    <li><a href="https://unicode-table.com/cn/">Unicode®字符百科</a></li>
+                                    <li><a href="https://unicode-table.com/cn/tools/encoder/">工具 - 编码器</a></li>
+                                    <li><a href="https://unicode-table.com/cn/tools/decoder/">工具 - 解码器</a></li>
+                                    <li><a href="https://unicode-table.com/cn/tools/flip/">工具 - 翻转</a></li>
+                                    <li><a href="https://unicode-table.com/cn/tools/generator/">工具 - Unicode 字符表生成</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">教程</a>
+                        <ul>
+                            <li><a href="https://www.runoob.com/">菜鸟教程</a></li>
+                            <li>
+                                <a href="#">w3school 在线教程</a>
+                                <ul>
+                                    <li><a href="http://www.w3school.com.cn/">w3school 在线教程</a></li>
+                                    <li><a href="http://www.w3school.com.cn/tiy/t.asp">W3School 在线测试工具</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">资料</a>
+                        <ul>
+                            <li><a href="http://www.ichgz.com/">广州市非物质文化遗产保护中心</a></li>
+                            <li><a href="http://www.ihchina.cn/">中国非物质文化遗产网</a></li>
+                            <li><a href="https://ctext.org/zhs">中国哲学书电子化计划</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>博客 / 论坛 / 社区 / 社交 / 通讯</h2>
+            <div id="list_2">
+                <ul>
+                    <li>
+                        <a href="#">博客</a>
+                        <ul>
+                            <li><a href="https://4ssh.cn/">4SSH</a></li>
+                            <li><a href="http://lolicorn.com/">安和 Blog</a></li>
+                            <li><a href="https://www.myitmx.com/">枫叶博客</a></li>
+                            <li><a href="https://laod.cn/">老D博客</a></li>
+                            <li><a href="https://www.appts.cn/">软件探索 - 分享好用的软件和网站</a></li>
+                            <li><a href="https://www.hamusita.cn/">小哈的博客</a></li>
+                            <li><a href="https://2heng.xin/">樱花庄的白猫</a></li>
+                            <li><a href="https://www.htcp.net/">云梦</a></li>
+                            <li><a href="https://blog.frost-zx.top/">Frost-ZX</a></li>
+                            <li><a href="https://www.haojunmei.top/">haojunmei</a></li>
+                            <li><a href="https://kenvix.com/">Kenvix's Blog</a></li>
+                            <li><a href="https://luotianyi.vc/">Luminous' Home</a></li>
+                            <li><a href="https://overfit.org/">OverFit Blog</a></li>
+                            <li><a href="https://n-a.date/">UNKNOW date</a></li>
+                            <li><a href="https://blog.zgcwkj.cn/">zgcwkj</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">论坛</a>
+                        <ul>
+                            <li><a href="http://www.ditiezu.com/">地铁族</a></li>
+                            <li><a href="https://www.pc426.com/">PC426</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">社区</a>
+                        <ul>
+                            <li><a href="https://tieba.baidu.com/">百度贴吧</a></li>
+                            <li><a href="https://www.douban.com/">豆瓣</a></li>
+                            <li><a href="https://www.oschina.net/">开源中国</a></li>
+                            <li><a href="https://www.codeseeding.com/">码云社 - 用代码改变世界</a></li>
+                            <li><a href="https://www.zhihu.com/">知乎</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">社交</a>
+                        <ul>
+                            <li><a href="https://weibo.com/">新浪微博</a></li>
+                            <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            <li><a href="https://qzone.qq.com/">QQ空间</a></li>
+                            <li><a href="https://twitter.com/">Twitter</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">通讯</a>
+                        <ul>
+                            <li><a href="http://www.pdflibr.com/">云短信</a></li>
+                            <li><a href="https://discordapp.com/">Discord</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>创作 / 制作</h2>
+            <div id="list_3">
+                <ul>
+                    <li>
+                        <a href="#">编程</a>
+                        <ul>
+                            <li>
+                                <a href="#">Java</a>
+                                <ul>
+                                    <li><a href="http://www.eclipse.org/">Eclipse</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://www.codeblocks.org/">Code::Blocks</a></li>
+                            <li><a href="https://developers.google.cn/blockly/">Google Blockly</a></li>
+                            <li><a href="https://www.python.org/">Python</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">建模</a>
+                        <ul>
+                            <li>
+                                <a href="#">Blender</a>
+                                <ul>
+                                    <li><a href="https://www.blender.org/">Blender</a></li>
+                                    <li><a href="https://docs.blender.org/manual/">Blender Reference Manual</a></li>
+                                    <li><a href="http://www.blendercn.org/">Blender 中国社区</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网页</a>
+                        <ul>
+                            <li><a href="https://h5.bce.baidu.com/">百度 H5</a></li>
+                            <li><a href="https://playcanvas.com/">PlayCanvas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">音乐</a>
+                        <ul>
+                            <li>
+                                <a href="#">合成音乐</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">VOCALOID</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">官方</a>
+                                                <ul>
+                                                    <li><a href="https://www.vocaloid.com/">VOCALOID ( ボーカロイド・ボカロ ) 公式サイト</a></li>
+                                                    <li><a href="http://www.zenith-grp.com/henian/">上海禾念信息科技有限公司</a></li>
+                                                    <li><a href="https://shop69979973.taobao.com/">上海禾念（淘宝网）</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">论坛</a>
+                                                <ul>
+                                                    <li><a href="http://www.luotianyi.org/forum.php">洛天依中文网</a></li>
+                                                    <li><a href="http://bbs.ivocaloid.com/">iVocaloid论坛</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">资源</a>
+                                                <ul>
+                                                    <li><a href="http://vocakey.info/">VOCAKEY</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://synthesizerv.com/">Synthesizer V</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">支持</a>
+                        <ul>
+                            <li><a href="https://afdian.net/">爱发电</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>多媒体</h2>
+            <div id="list_4">
+                <ul>
+                    <li>
+                        <a href="#">视频</a>
+                        <ul>
+                            <li>
+                                <a href="#">网站</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">直播</a>
+                                        <ul>
+                                            <li><a href="http://pad.cretech.cn/livecloud/pcindex.php">创先泰克教育云</a></li>
+                                            <li><a href="https://www.douyu.com/">斗鱼</a></li>
+                                            <li><a href="https://www.huya.com/">虎牙直播</a></li>
+                                            <li><a href="http://v.163.com/">网易直播</a></li>
+                                            <li><a href="https://www.earthtv.com/">earthTV</a></li>
+                                            <li><a href="http://www.skylinewebcams.com/">SkylineWebcams</a></li>
+                                            <li><a href="https://www.twitch.tv/">Twitch</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">bilibili</a>
+                                        <ul>
+                                            <li><a href="https://www.bilibili.com/">bilibili（主站）</a></li>
+                                            <li><a href="https://live.bilibili.com/">bilibili（直播）</a></li>
+                                            <li><a href="https://search.bilibili.com/">bilibili（搜索）</a></li>
+                                            <li><a href="https://message.bilibili.com/">bilibili（消息中心）</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.8kraw.com//">8KRAW - 正版视频素材库</a></li>
+                                    <li><a href="http://www.iqiyi.com/">爱奇艺</a></li>
+                                    <li><a href="http://v.baidu.com/">百度视频</a></li>
+                                    <li><a href="https://www.vmovier.com/">场库 - 高品质短片分享平台</a></li>
+                                    <li><a href="http://www.le.com/">乐视视频</a></li>
+                                    <li><a href="https://haokan.baidu.com/">好看视频</a></li>
+                                    <li><a href="http://www.mgtv.com/">芒果TV</a></li>
+                                    <li><a href="http://v.qq.com/">腾讯视频</a></li>
+                                    <li><a href="https://www.xinpianchang.com/">新片场</a></li>
+                                    <li><a href="http://www.youku.com/">优酷</a></li>
+                                    <li><a href="http://www.acfun.cn/">AcFun</a></li>
+                                    <li><a href="https://www.tokyostreetview.com/">TokyoStreetView</a></li>
+                                    <li><a href="https://www.utovr.com/">UtoVR - 带您进入VR世界</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">工具</a>
+                                <ul>
+                                    <li><a href="https://www.jijidown.com/">哔哩哔哩唧唧</a></li>
+                                    <li><a href="https://www.kanbilibili.com/">看哔哩哔哩</a></li>
+                                    <li><a href="https://biliquery.typcn.com/">Bilibili 工具箱</a></li>
+                                    <li><a href="https://www.biliplus.com/">BiliPlus</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">资源</a>
+                                <ul>
+                                    <li><a href="https://peach.blender.org/download/">Big Buck Bunny</a></li>
+                                    <li><a href="http://bbb3d.renderfarming.net/download.html">Big Buck Bunny 3D</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">图片</a>
+                        <ul>
+                            <li>
+                                <a href="#">网站</a>
+                                <ul>
+                                    <li><a href="https://image.baidu.com/">百度图片</a></li>
+                                    <li><a href="https://imgur.com/">Imgur</a></li>
+                                    <li><a href="https://http.cat/">HTTP Cats</a></li>
+                                    <li><a href="https://unsplash.com/">Unsplash</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">工具</a>
+                                <ul>
+                                    <li><a href="https://www.polaxiong.com/">泼辣修图</a></li>
+                                    <li><a href="https://www.fotor.com/">Fotor</a></li>
+                                    <li><a href="http://www.iqdb.org/">Multi-service image search</a></li>
+                                    <li><a href="http://saucenao.com/">SauceNAO Image Search</a></li>
+                                    <li><a href="http://tineye.com/">TinEye</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">音乐</a>
+                        <ul>
+                            <li>
+                                <a href="#">网站</a>
+                                <ul>
+                                    <li><a href="http://www.5nd.com/">5nd</a></li>
+                                    <li><a href="https://www.kugou.com/">酷狗音乐</a></li>
+                                    <li><a href="https://www.kuwo.cn/">酷我音乐</a></li>
+                                    <li><a href="https://music.taihe.com/">千千音乐</a></li>
+                                    <li><a href="https://music.163.com/">网易云音乐</a></li>
+                                    <li><a href="https://www.xiami.com/">虾米音乐</a></li>
+                                    <li><a href="https://y.qq.com/">QQ音乐</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">工具</a>
+                                <ul>
+                                    <li><a href="http://www.multiplayerpiano.com/">在线多人钢琴</a></li>
+                                    <li><a href="https://www.autopiano.cn/">自由钢琴 AutoPiano</a></li>
+                                    <li><a href="https://www.noisli.com/">Noisli</a></li>
+                                    <li><a href="http://rainymood.com/">Rainy Mood</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>工具</h2>
+            <div id="list_5">
+                <ul>
+                    <li>
+                        <a href="#">编辑</a>
+                        <ul>
+                            <li><a href="https://xiezuocat.com/">秘塔写作猫</a></li>
+                            <li><a href="http://www.atool.org/colorpicker.php">颜色选择器</a></li>
+                            <li><a href="https://pandao.github.io/editor.md/">Editor.md</a></li>
+                            <li><a href="https://phlntn.com/emojibuilder/">Emoji Builder</a></li>
+                            <li><a href="https://simplemde.com/">SimpleMDE</a></li>
+                            <li><a href="https://smartmockups.com/">Smartmockups - 产品 Mockup 生成器</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">测试</a>
+                        <ul>
+                            <li><a href="http://www.02095079.com/">长城宽带网速测试</a></li>
+                            <li><a href="http://mybrowse.osfipin.com/">浏览器信息</a></li>
+                            <li><a href="https://screen.51240.com/">屏幕检测</a></li>
+                            <li><a href="http://nstool.netease.com/">网易 DNS 检测</a></li>
+                            <li><a href="http://www.color.org/version4html.xalter">ICC Version 4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">查询</a>
+                        <ul>
+                            <li>
+                                <a href="#">地图</a>
+                                <ul>
+                                    <li><a href="https://map.baidu.com/">百度地图</a></li>
+                                    <li><a href="https://www.amap.com/">高德地图</a></li>
+                                    <li><a href="https://cybermap.kaspersky.com/cn/">卡巴斯基网络威胁实时地图</a></li>
+                                    <li><a href="https://map.qq.com/">腾讯地图</a></li>
+                                    <li><a href="https://cn.bing.com/maps">Bing 地图</a></li>
+                                    <li><a href="https://www.osgeo.cn/">OSGeo中国中心 - 地理空间数据共享</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">搜索引擎</a>
+                                <ul>
+                                    <li><a href="https://cn.bing.com/">Bing 搜索</a></li>
+                                    <li><a href="https://www.google.com/">Google 搜索</a></li>
+                                    <li><a href="https://www.baidu.com/">百度搜索</a></li>
+                                    <li><a href="https://www.jiumodiary.com/">鸠摩搜索 - 文档搜索引擎</a></li>
+                                    <li><a href="https://mijisou.com/">秘迹搜索</a></li>
+                                    <li><a href="https://www.sogou.com/">搜狗搜索</a></li>
+                                    <li><a href="http://so.ui001.com/">素材搜索</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://fonts.safe.360.cn/">360查字体</a></li>
+                            <li><a href="https://www.metalgearjoe.cn/mn/">垃圾分类指南</a></li>
+                            <li><a href="https://time.is/">任何时区的精确时间</a></li>
+                            <li><a href="https://www.tianyancha.com/">天眼查</a></li>
+                            <li><a href="http://www.weather.com.cn/">中国天气网</a></li>
+                            <li><a href="http://www.nmc.cn/">中央气象台</a></li>
+                            <li><a href="https://bios-pw.org/">BIOS Master Password Generator</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">工具箱</a>
+                        <ul>
+                            <li><a href="https://www.toolnb.com/">爱资料在线工具</a></li>
+                            <li><a href="http://tool.mkblog.cn/">孟坤工具箱</a></li>
+                            <li><a href="https://wn.run/">万能命令 - 快捷寻找和直达你想要的各类工具</a></li>
+                            <li><a href="http://tool.uixsj.cn/">现实君工具箱</a></li>
+                            <li><a href="https://tool.lu/">在线工具</a></li>
+                            <li><a href="http://www.bejson.com/">Be JSON</a></li>
+                            <li><a href="https://tools.miku.ac/">MikuTools</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">举报</a>
+                        <ul>
+                            <li><a href="https://www.12321.cn/">12321 网络不良与垃圾信息举报受理中心</a></li>
+                            <li><a href="http://www.12377.cn/">国家网信办举报中心</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">模拟</a>
+                        <ul>
+                            <li><a href="https://habitica.com/">Habitica</a></li>
+                            <li><a href="https://www.pcjs.org/">PCjs Machines</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">全景</a>
+                        <ul>
+                            <li><a href="http://720yun.com/">720云全景虚拟现实社区</a></li>
+                            <li><a href="http://www.earthol.org/">地球在线</a></li>
+                            <li><a href="http://sh-meet.bigpixel.cn/">上海超级全景</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网盘</a>
+                        <ul>
+                            <li><a href="https://pan.baidu.com/">百度网盘</a></li>
+                            <li><a href="https://mega.nz/">MEGA</a></li>
+                            <li><a href="https://onedrive.live.com/">OneDrive</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网站</a>
+                        <ul>
+                            <li><a href="https://fofa.so/">FOFA Pro - 网络空间安全搜索引擎</a></li>
+                            <li><a href="https://www.ssllabs.com/">Qualys SSL Labs</a></li>
+                            <li><a href="https://web.archive.org/">Wayback Machine</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">卫星</a>
+                        <ul>
+                            <li><a href="http://rsapp.nsmc.org.cn/geofy/">风云四号卫星天气应用平台</a></li>
+                            <li><a href="http://himawari8.nict.go.jp/">向日葵-8號</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">邮箱</a>
+                        <ul>
+                            <li><a href="http://mail.126.com/">126邮箱</a></li>
+                            <li><a href="https://mail.163.com/">网易邮箱</a></li>
+                            <li><a href="https://mail.sina.com.cn/">新浪邮箱</a></li>
+                            <li><a href="https://outlook.live.com/">Outlook</a></li>
+                            <li><a href="https://mail.qq.com/">QQ邮箱</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">娱乐</a>
+                        <ul>
+                            <li><a href="https://www.corgiorgy.com/">CORGI ORGY</a></li>
+                            <li><a href="https://static.hfi.me/mikutap/">Mikutap</a></li>
+                            <li><a href="https://theuselessweb.com/">The Useless Web</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">转换</a>
+                        <ul>
+                            <li><a href="http://cli.im/">草料二维码</a></li>
+                            <li><a href="http://tool.chinaz.com/tools/sinadwz.aspx">批量新浪短链</a></li>
+                            <li><a href="https://smallpdf.com/">Smallpdf - 您所有 PDF 问题的免费解决方案</a></li>
+                            <li><a href="http://www.docpe.com/word/word-to-html.aspx">Word 转 HTML</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                        <ul>
+                            <li><a href="https://wj.qq.com/">腾讯问卷</a></li>
+                            <li><a href="http://www.net2ftp.com/">net2ftp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>购物</h2>
+            <div id="list_6">
+                <ul>
+                    <li>
+                        <a href="#">网站</a>
+                        <ul>
+                            <li><a href="https://www.dangdang.com/">当当网</a></li>
+                            <li><a href="https://www.jd.com/">京东</a></li>
+                            <li><a href="https://www.kaola.com/">考拉海购</a></li>
+                            <li><a href="https://www.mogujie.com/">蘑菇街</a></li>
+                            <li><a href="https://www.suning.com/">苏宁易购</a></li>
+                            <li><a href="https://www.taobao.com/">淘宝</a></li>
+                            <li><a href="https://www.tmall.com/">天猫</a></li>
+                            <li><a href="https://www.mi.com/">小米商城</a></li>
+                            <li><a href="https://apsgo.com/">APSGO 软购</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">饮食</a>
+                        <ul>
+                            <li><a href="http://www.pizzahut.com.cn/">必胜客</a></li>
+                            <li><a href="https://www.4008123123.com/">必胜客宅急送</a></li>
+                            <li><a href="https://www.ele.me/">饿了么</a></li>
+                            <li><a href="http://www.kfc.com.cn/">肯德基</a></li>
+                            <li><a href="https://www.4008823823.com.cn/">肯德基宅急送</a></li>
+                            <li><a href="https://h5.waimai.meituan.com/">美团外卖</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>金融</h2>
+            <div id="list_7">
+                <ul>
+                    <li>
+                        <a href="#">银行</a>
+                        <ul>
+                            <li><a href="http://www.bankcomm.com/">交通银行</a></li>
+                            <li><a href="http://www.cmbchina.com/">招商银行</a></li>
+                            <li><a href="https://www.icbc.com.cn/">中国工商银行</a></li>
+                            <li><a href="http://www.ccb.com/">中国建设银行</a></li>
+                            <li><a href="http://www.abchina.com/">中国农业银行</a></li>
+                            <li><a href="http://www.pbc.gov.cn/">中国人民银行</a></li>
+                            <li><a href="http://www.boc.cn/">中国银行</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.alipay.com/">支付宝</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>设计</h2>
+            <div id="list_8">
+                <ul>
+                    <li><a href="https://huaban.com/">花瓣网</a></li>
+                    <li><a href="https://www.uigreat.com/">优阁网（UIGREAT）</a></li>
+                    <li><a href="http://www.uisdc.com/">优设网（UISDC）</a></li>
+                    <li><a href="https://www.yrucd.com/">云瑞设计</a></li>
+                    <li><a href="https://www.zcool.com.cn/">站酷（ZCOOL）</a></li>
+                    <li><a href="https://www.ui.cn/">UI中国</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>生活</h2>
+            <div id="list_9">
+                <ul>
+                    <li>
+                        <a href="#">出行</a>
+                        <ul>
+                            <li>
+                                <a href="#">轨道交通</a>
+                                <ul>
+                                    <li><a href="https://www.bjsubway.com/">北京地铁</a></li>
+                                    <li><a href="http://www.chengdurail.com/">成都地铁</a></li>
+                                    <li><a href="http://www.gzmtr.com/">广州地铁</a></li>
+                                    <li><a href="http://www.hzmetro.com/">杭州地铁</a></li>
+                                    <li><a href="http://www.njmetro.com.cn/">南京地铁</a></li>
+                                    <li><a href="http://www.nngdjt.com/">南宁地铁</a></li>
+                                    <li><a href="http://www.qd-metro.com/">青岛地铁</a></li>
+                                    <li><a href="http://www.shmetro.com/">上海地铁</a></li>
+                                    <li><a href="http://www.symtc.com/">沈阳地铁</a></li>
+                                    <li><a href="http://www.szmc.net/">深圳地铁</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.12306.cn/">中国铁路 12306</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">旅游</a>
+                        <ul>
+                            <li><a href="https://www.alitrip.com/">飞猪旅行</a></li>
+                            <li><a href="http://www.tuniu.com/">途牛</a></li>
+                            <li><a href="https://www.ctrip.com/">携程旅行网</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://www.pm25.com/">绿色呼吸</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>调试</h2>
+            <div id="list_10">
+                <ul>
+                    <li>
+                        <a href="#">Chrome（浏览器限制，需要复制链接后手动打开）</a>
+                        <ul>
+                            <li><a href="chrome://user-actions/">操作记录</a></li>
+                            <li><a href="chrome://version/">关于版本</a></li>
+                            <li><a href="chrome://inspect/#devices">检查</a></li>
+                            <li><a href="chrome://extensions/">扩展程序</a></li>
+                            <li><a href="chrome://history/">历史记录</a></li>
+                            <li><a href="chrome://media-internals/">媒体内部数据</a></li>
+                            <li><a href="chrome://conflicts/">模块</a></li>
+                            <li><a href="chrome://flags/">实验性功能</a></li>
+                            <li><a href="chrome://bookmarks/">书签管理器</a></li>
+                            <li><a href="chrome://downloads/">下载内容</a></li>
+                            <li><a href="chrome://apps/">应用</a></li>
+                            <li><a href="chrome://appcache-internals/">应用缓存</a></li>
+                            <li><a href="chrome://policy/">政策</a></li>
+                            <li><a href="chrome://net-internals/">抓包</a></li>
+                            <li><a href="chrome://components/">组件</a></li>
+                            <li><a href="chrome://thumbnails/">最近浏览网页缩略图</a></li>
+                            <li><a href="chrome://about/">Chrome URLs</a></li>
+                            <li><a href="chrome://dino/">Dino</a></li>
+                            <li><a href="chrome://favicon/size/32@1x/协议://链接/">Favicon</a></li>
+                            <li><a href="chrome://indexeddb-internals/">HTML5 本地储存</a></li>
+                            <li><a href="chrome://translate-internals/">Translate Internals</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:prompt('查看源代码','view-source:链接'); void(0);">查看源代码</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>网络</h2>
+            <div id="list_11">
+                <ul>
+                    <li>
+                        <a href="#">管理</a>
+                        <ul>
+                            <li><a href="http://192.168.0.1/">局域网（192.168.0.1）</a></li>
+                            <li><a href="http://192.168.0.1:8080/">局域网（192.168.0.1:8080）</a></li>
+                            <li><a href="http://192.168.1.1/">局域网（192.168.1.1）</a></li>
+                            <li><a href="http://192.168.1.1:8080/">局域网（192.168.1.1:8080）</a></li>
+                            <li><a href="http://192.168.5.1/">局域网（192.168.5.1）</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">云服务</a>
+                        <ul>
+                            <li><a href="https://www.aliyun.com/">阿里云</a></li>
+                            <li><a href="https://cloud.baidu.com/">百度智能云</a></li>
+                            <li><a href="https://www.host199.com/">悍铭数据中心</a></li>
+                            <li><a href="https://cloud.tencent.com/">腾讯云</a></li>
+                            <li><a href="https://www.cloudflare.com/">Cloudflare</a></li>
+                            <li><a href="http://www.mmtrix.com/">mmTrix - 云应用性能管理</a></li>
+                            <li><a href="https://www.nodecache.com/">Nodecache</a></li>
+                            <li><a href="https://vultr.com/">Vultr</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">DNS</a>
+                        <ul>
+                            <li><a href="http://www.114dns.com/">114DNS</a></li>
+                            <li><a href="http://www.alidns.com/">阿里DNS</a></li>
+                            <li><a href="http://www.dnspai.com/">DNS派</a></li>
+                            <li><a href="https://www.dnspod.cn/Products/Public.DNS">Public DNS+</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>系统</h2>
+            <div id="list_12">
+                <ul>
+                    <li>
+                        <a href="#">Android</a>
+                        <ul>
+                            <li>
+                                <a href="#">软件</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">网站</a>
+                                        <ul>
+                                            <li><a href="https://coolapk.com/">酷安网</a></li>
+                                            <li><a href="https://apkpure.com/">APK Pure</a></li>
+                                            <li><a href="https://play.google.com/">Google Play</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="http://adbshell.com/">ADB Shell</a></li>
+                                    <li><a href="https://limboemulator.weebly.com/">Limbo PC Emulator</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">系统</a>
+                                <ul>
+                                    <li><a href="https://www.resurrectionremix.com/">Resurrection Remix OS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Linux</a>
+                        <ul>
+                            <li>
+                                <a href="#">资料</a>
+                                <ul>
+                                    <li><a href="http://man.linuxde.net/screen">Linux screen 命令</a></li>
+                                    <li><a href="https://www.runoob.com/linux/linux-comm-sed.html">Linux sed 命令</a></li>
+                                    <li><a href="https://www.cnblogs.com/maxincai/p/5146338.html">Linux sed 命令</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://www.ubuntu.org.cn/">Ubuntu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Windows</a>
+                        <ul>
+                            <li><a href="https://msdn.itellyou.cn/">MSDN，我告诉你</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                        <ul>
+                            <li><a href="http://www.lakka.tv/">Lakka</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>写作</h2>
+            <div id="list_13">
+                <ul>
+                    <li><a href="https://www.jianshu.com/">简书</a></li>
+                    <li><a href="http://www.lofter.com/">LOFTER</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>学习</h2>
+            <div id="list_14">
+                <ul>
+                    <li><a href="https://www.91suke.com/">速课网</a></li>
+                    <li><a href="https://www.certiport.com/">My Certiport</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>游戏</h2>
+            <div id="list_15">
+                <ul>
+                    <li>
+                        <a href="#">网站</a>
+                        <ul>
+                            <li><a href="http://www.17173.com/">17173</a></li>
+                            <li><a href="http://www.4399.com/">4399</a></li>
+                            <li><a href="http://www.7k7k.com/">7k7k</a></li>
+                            <li><a href="http://www.gamersky.com/">游民星空</a></li>
+                            <li><a href="https://www.ubisoft.com.cn/">育碧游戏（UBISOFT）</a></li>
+                            <li><a href="https://www.epicgames.com/">Epic Games</a></li>
+                            <li><a href="https://www.origin.com/">Origin</a></li>
+                            <li><a href="https://store.steampowered.com/">Steam</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">2048</a>
+                        <ul>
+                            <li><a href="http://gabrielecirulli.github.io/2048/">2048</a></li>
+                            <li><a href="http://cyberzhg.github.io/2048/">2147483648</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Minecraft</a>
+                        <ul>
+                            <li>
+                                <a href="#">网站</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">论坛</a>
+                                        <ul>
+                                            <li><a href="http://www.zuimc.com/">最MC论坛</a></li>
+                                            <li><a href="https://www.mcbbs.net/forum.php">Minecraft 中文论坛</a></li>
+                                            <li><a href="http://forum.minecraft-hk.com/portal.php">Minecraft-HK Community</a></li>
+                                            <li><a href="https://www.planetminecraft.com/">Planet Minecraft Community</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wiki</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">官方</a>
+                                                <ul>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/">中文 Minecraft Wiki</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/附魔">附魔</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/记分板">记分板</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/命令">命令</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/披风">披风</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/鞘翅">鞘翅</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/音乐">音乐</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/状态效果">状态效果</a></li>
+                                                    <li><a href="https://minecraft-zh.gamepedia.com/战利品表">战利品表</a></li>
+                                                    <li><a href="https://minecraft.gamepedia.com/Model">Model</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="https://www.mcmod.cn/">MC百科</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://minecraft.net/">官网</a></li>
+                                    <li><a href="http://chunkbase.com/">Chunk Base</a></li>
+                                    <li><a href="https://innovacreation.studio/">Innova Creation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">服务器</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">网站</a>
+                                        <ul>
+                                            <li><a href="http://minecraftservers.org/">服务器列表</a></li>
+                                            <li><a href="http://gensoukyo.moe/">幻想乡</a></li>
+                                            <li><a href="https://mc.frozenstudio.top/">麦子茶会</a></li>
+                                            <li><a href="https://earthmc.net/">EarthMC</a></li>
+                                            <li><a href="http://mineplex.com/">Mineplex</a></li>
+                                            <li><a href="http://www.crafter.me/mc/">Rev-Craft</a></li>
+                                            <li><a href="https://wolvhaven.net/">WolvHaven</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">插件</a>
+                                        <ul>
+                                            <li><a href="http://mineplugin.org/">Minecraft 插件百科</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">服务端</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Sponge</a>
+                                                <ul>
+                                                    <li><a href="https://www.spongepowered.org/">Sponge</a></li>
+                                                    <li><a href="https://ore.spongepowered.org/">Sponge Ore</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="http://dl.bukkit.org/">Bukkit</a></li>
+                                            <li><a href="http://www.pocketmine.net/">PocketMine-MP</a></li>
+                                            <li><a href="https://yivesmirror.com/">Yive's Mirror</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">工具</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">翻译</a>
+                                        <ul>
+                                            <li><a href="https://cfpaorg.github.io/TransQualityControl/">翻译质量管控报告</a></li>
+                                            <li><a href="https://dict.mcmod.cn/">模组翻译参考词典</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">MCC Toolchest</a>
+                                        <ul>
+                                            <li><a href="https://mcctoolchest.weebly.com/">MCC Toolchest</a></li>
+                                            <li><a href="http://mcctoolchest.com/">MCC Toolchest PE</a></li>
+                                            <li><a href="https://tieba.baidu.com/p/5759881297">MCC Toolchest PE 教程</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="http://mc.whitegem.net/">创建你自己的 Minecraft 成就</a></li>
+                                    <li><a href="https://spu.spgoding.com/">命令升级</a></li>
+                                    <li><a href="https://skin.prinzeugen.net/">Blessing Skin Server</a></li>
+                                    <li><a href="https://blockbench.net/">Blockbench</a></li>
+                                    <li><a href="http://www.minecraft-crafting.net/">Crafting Guide</a></li>
+                                    <li><a href="https://cuberite.org/">Cuberite</a></li>
+                                    <li><a href="https://www.mcedit-unified.net/">MCEdit Unified</a></li>
+                                    <li><a href="https://mcreator.net/">MCreator - The Best Minecraft Mod Maker Ever</a></li>
+                                    <li><a href="https://overviewer.org/">Minecraft Overviewer</a></li>
+                                    <li><a href="http://www.realtimerendering.com/erich/minecraft/public/mineways/">Mineways</a></li>
+                                    <li><a href="https://zh-cn.namemc.com/">NameMC</a></li>
+                                    <li><a href="https://www.minecraftjson.com/">Tellraw Generator</a></li>
+                                    <li><a href="https://www.universalminecrafteditor.com/">Universal Minecraft Editor</a></li>
+                                </ul>
+                            </li>
+                            <!--
+                            <li>
+                                <a href="#">黑科技</a>
+                                <ul>
+                                    <li><a href="http://www.mchacks.net/">Minecraft Hacked Clients</a></li>
+                                </ul>
+                            </li>
+                            -->
+                            <li>
+                                <a href="#">开发</a>
+                                <ul>
+                                    <li><a href="https://mcforge-cn.readthedocs.io/zh/latest/">Forge 文档</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">资源</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">网站</a>
+                                        <ul>
+                                            <li><a href="https://www.bakaxl.com/">BakaXL</a></li>
+                                            <li><a href="http://jespertheend.com/">Jesper the End</a></li>
+                                            <li><a href="https://www.mineimator.com/">Mine-imator</a></li>
+                                            <li><a href="https://www.curseforge.com/minecraft/mc-mods">Minecraft CurseForge (Mod)</a></li>
+                                            <li><a href="http://www.minecraftxz.com/">Minecraft 中文下载站</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">光影</a>
+                                        <ul>
+                                            <li><a href="http://sonicether.com/shaders/">SEUS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">模组</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">API</a>
+                                                <ul>
+                                                    <li><a href="http://files.minecraftforge.net/">Forge</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="http://chickenbones.net/Pages/links.html">Chicken Bones Downloads</a></li>
+                                            <li><a href="http://chocolateminecraft.com/">Chocolate Minecraft</a></li>
+                                            <li><a href="http://ichun.us/">iChun's blog</a></li>
+                                            <li><a href="http://www.liteloader.com/">LiteLoader</a></li>
+                                            <li><a href="https://www.replaymod.com/">Minecraft Replay Mod</a></li>
+                                            <li><a href="http://www.optifine.net/">OptiFine</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">资源包</a>
+                                        <ul>
+                                            <li><a href="http://cocricot.pics/">cocricot</a></li>
+                                            <li><a href="https://www.johnsmithlegacy.co.uk/">John Smith Legacy</a></li>
+                                            <li><a href="http://summerfields.info/">SUMMERFIELDS</a></li>
+                                            <li><a href="http://lemoesh.com/three-steps/">Three Steps</a></li>
+                                            <li><a href="http://willcraft.org/">WillPack</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">RPG</a>
+                        <ul>
+                            <li><a href="http://www.66rpg.com/">橙光游戏中心</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">StarBound</a>
+                        <ul>
+                            <li>
+                                <a href="#">软件</a>
+                                <ul>
+                                    <li><a href="http://starcheat.org/">StarCheat</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>资讯</h2>
+            <div id="list_16">
+                <ul>
+                    <li>
+                        <a href="#">新闻</a>
+                        <ul>
+                            <li><a href="https://news.baidu.com/">百度新闻</a></li>
+                            <li><a href="http://www.huanqiu.com/">环球网</a></li>
+                            <li><a href="http://www.kankanews.com/">看看新闻 - 叩击时代</a></li>
+                            <li><a href="http://news.sohu.com/">搜狐新闻</a></li>
+                            <li><a href="https://new.qq.com/">腾讯新闻</a></li>
+                            <li><a href="http://news.sina.com.cn/">新浪新闻</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://36kr.com/">36kr（36氪）</a></li>
+                    <li><a href="http://jandan.net/">煎蛋</a></li>
+                    <li><a href="https://sspai.com/">少数派</a></li>
+                    <li><a href="https://www.qq.com/">腾讯网</a></li>
+                    <li><a href="https://info.3g.qq.com/">腾讯网（3G）</a></li>
+                    <li><a href="http://www.cctv.com/">央视网 - 世界就在眼前</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>资源</h2>
+            <div id="list_17">
+                <ul>
+                    <li>
+                        <a href="#">建站</a>
+                        <ul>
+                            <li>
+                                <a href="#">插件 / 框架</a>
+                                <ul>
+                                    <li><a href="https://www.bootcss.com/">Bootstrap 中文网</a></li>
+                                    <li><a href="https://highlightjs.org/">highlight.js</a></li>
+                                    <li><a href="https://jquery.com/">jQuery</a></li>
+                                    <li><a href="http://www.jq22.com/">jQuery 插件库</a></li>
+                                    <li><a href="http://www.htmleaf.com/">jQuery 之家</a></li>
+                                    <li><a href="http://layer.layui.com/">layer</a></li>
+                                    <li><a href="https://leafletjs.com/">Leaflet - 可交互的地图</a></li>
+                                    <li><a href="http://threejs.org/">three.js – JavaScript 3D library</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Typecho</a>
+                                <ul>
+                                    <li><a href="http://typecho.org/">Typecho</a></li>
+                                    <li><a href="https://store.get233.com/">Mirages 主题</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://lnmp.org/">LNMP 一键安装包</a></li>
+                            <li><a href="https://www.lsky.pro/">Lsky Pro - 图床</a></li>
+                            <li><a href="http://www.directorylister.com/">PHP Directory Lister</a></li>
+                            <li><a href="http://www.webmin.com/">Webmin</a></li>
+                            <li><a href="https://www.dokuwiki.org/">DokuWiki</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">镜像站</a>
+                        <ul>
+                            <li><a href="https://opsx.alibaba.com/mirror">阿里巴巴开源镜像站</a></li>
+                            <li><a href="https://mirror.bjtu.edu.cn/">北京交通大学自由与开源软件镜像站</a></li>
+                            <li><a href="https://mirrors.cqu.edu.cn/"> 重庆大学开源软件镜像站</a></li>
+                            <li><a href="http://mirrors.neusoft.edu.cn/">大连东软信息学院开源镜像站</a></li>
+                            <li><a href="https://mirrors.huaweicloud.com/">华为开源镜像站</a></li>
+                            <li><a href="http://mirror.hust.edu.cn/">华中科技大学开源镜像站</a></li>
+                            <li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a></li>
+                            <li><a href="http://mirrors.163.com/">网易开源镜像站</a></li>
+                            <li><a href="http://mirrors.zju.edu.cn/">浙江大学开源镜像站</a></li>
+                            <li><a href="http://mirrors.ustc.edu.cn/">中国科学技术大学开源软件镜像</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">软件</a>
+                        <ul>
+                            <li>
+                                <a href="#">网站</a>
+                                <ul>
+                                    <li><a href="https://pc.qq.com/">腾讯软件中心</a></li>
+                                    <li><a href="https://www.iplaysoft.com/">异次元软件世界</a></li>
+                                    <li><a href="https://getitfree.cn/">正版中国</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">播放器</a>
+                                <ul>
+                                    <li><a href="#">Potplayer</a></li>
+                                    <li><a href="https://player.qq.com/">QQ影音</a></li>
+                                    <li><a href="https://www.videolan.org/">VLC</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">插件</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">浏览器</a>
+                                        <ul>
+                                            <li><a href="http://www.cnplugins.com/">Chrome 插件网</a></li>
+                                            <li><a href="https://greasyfork.org/zh-CN">Greasy Fork</a></li>
+                                            <li><a href="http://www.infinitynewtab.com/">Infinity New Tab</a></li>
+                                            <li><a href="https://tab.xiejie.co/">Material Design New Tab</a></li>
+                                            <li><a href="https://www.tampermonkey.net/">Tampermonkey</a></li>
+                                            <li><a href="https://violentmonkey.github.io/">Violentmonkey</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://sourceforge.net/projects/npp-plugins/files/">Notepad++ Plugins</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">创作 / 制作</a>
+                                <ul>
+                                    <li><a href="https://helpx.adobe.com/download-install/kb/creative-cloud-apps-download.html">Adobe Creative Cloud apps</a></li>
+                                    <li><a href="https://www.libreoffice.org/">LibreOffice</a></li>
+                                    <li><a href="https://ephtracy.github.io/">MagicaVoxel</a></li>
+                                    <li><a href="https://www.midieditor.org/">MidiEditor</a></li>
+                                    <li><a href="http://www.midipiano.net/">MidiPiano</a></li>
+                                    <li><a href="http://openmpt.org/">OpenMPT</a></li>
+                                    <li><a href="http://opentoonz.github.io/e/index.html">OpenToonz</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">工具</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">NetSarang</a>
+                                        <ul>
+                                            <li><a href="https://www.netsarang.com/">NetSarang</a></li>
+                                            <li><a href="https://www.netsarang.com/zh/xftp/">Xftp</a></li>
+                                            <li><a href="https://www.netsarang.com/zh/xshell/">Xshell</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="http://www.wofficebox.com/">万彩办公大师</a></li>
+                                    <li><a href="https://filezilla-project.org/">FileZilla</a></li>
+                                    <li><a href="http://freepiano.tiwb.com/">FreePiano</a></li>
+                                    <li><a href="http://isparta.github.io/">iSparta - PNG压缩与格式转换工具</a></li>
+                                    <li><a href="https://www.cockos.com/licecap/">LICEcap</a></li>
+                                    <li><a href="http://www.linuxliveusb.com/">LinuxLive USB Creator</a></li>
+                                    <li><a href="http://pooi.moe/Locale-Emulator/">Locale Emulator</a></li>
+                                    <li><a href="https://www.mp3tag.de/">Mp3tag - 标签编辑器</a></li>
+                                    <li><a href="https://zh.snipaste.com/">Snipaste</a></li>
+                                    <li><a href="https://www.typora.io/">Typora</a></li>
+                                    <li><a href="https://u.tools/">uTools - 你的生产力工具集</a></li>
+                                    <li><a href="https://x64dbg.com/">x64dbg - 开源的 Windows 调试工具</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">美化</a>
+                                <ul>
+                                    <li><a href="http://www.win4000.com/">电脑主题之家</a></li>
+                                    <li><a href="http://moe.005.tv/">萌娘资源站</a></li>
+                                    <li><a href="http://www.glass8.eu/">Aero Glass for Win8+</a></li>
+                                    <li><a href="http://metroforsteam.com/">Metro for Steam</a></li>
+                                    <li><a href="http://rainmeter.cn/cms/">Rainmeter</a></li>
+                                    <li><a href="http://www.syssel.net/hoefs/software_uxtheme.php">UltraUXThemePatcher</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">网络</a>
+                                <ul>
+                                    <li><a href="https://www.centbrowser.cn/">百分浏览器</a></li>
+                                    <li><a href="https://www.google.cn/intl/zh-CN/chrome/">Chrome</a></li>
+                                    <li><a href="https://natapp.cn/">NATAPP</a></li>
+                                    <li><a href="https://www.natfrp.org/">Sakura Frp</a></li>
+                                    <li><a href="http://www.gnu.org/software/wget/faq.html#download">Wget</a></li>
+                                    <li><a href="https://www.wireshark.org/">Wireshark</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">虚拟化</a>
+                                <ul>
+                                    <li><a href="https://www.virtualbox.org/">Oracle VM VirtualBox</a></li>
+                                    <li><a href="http://download.virtualbox.org/virtualbox/">Oracle VM VirtualBox (Download)</a></li>
+                                    <li><a href="https://www.vmware.com/cn/products/workstation-pro.html">VMware Workstation Pro</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">素材</a>
+                        <ul>
+                            <li>
+                                <a href="#">网站</a>
+                                <ul>
+                                    <li><a href="http://www.iconpng.com/">爱看图标网</a></li>
+                                    <li><a href="http://www.huiyi8.com/">绘艺素材网</a></li>
+                                    <li><a href="http://www.lanrentuku.com/">懒人图库</a></li>
+                                    <li><a href="http://www.nipic.com/">昵图网</a></li>
+                                    <li><a href="https://588ku.com/">千库网</a></li>
+                                    <li><a href="http://ico.58pic.com/">千图网</a></li>
+                                    <li><a href="http://www.ypppt.com/">优品PPT</a></li>
+                                    <li><a href="http://www.easyicon.net/">EASYICON</a></li>
+                                    <li><a href="https://www.iconfont.cn/">Iconfont - 阿里巴巴矢量图标库</a></li>
+                                    <li><a href="http://www.officeplus.cn/">OfficePLUS</a></li>
+                                    <li><a href="https://www.pexels.com/zh-tw/">Pexels</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">其他</a>
+                                <ul>
+                                    <li><a href="http://geek.prdsarea.com/forum-256-1.html">尼特部落 - MMD 模型下载区</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">字体</a>
+                        <ul>
+                            <li><a href="https://alibabafont.taobao.com/">阿里巴巴字体素材平台</a></li>
+                            <li><a href="http://tsanger.cn/">仓耳字库</a></li>
+                            <li><a href="http://www.foundertype.com/">方正字库</a></li>
+                            <li><a href="https://source.typekit.com/source-han-serif/cn/">思源宋体</a></li>
+                            <li><a href="http://font.chinaz.com/">站长字体</a></li>
+                            <li><a href="http://www.zhaozi.cn/">找字网</a></li>
+                            <li><a href="http://zisea.com/download/">字海(叶典)</a></li>
+                            <li><a href="https://www.hellofont.cn/">字由</a></li>
+                            <li><a href="https://mirrors.tuna.tsinghua.edu.cn/adobe-fonts/">adobe-fonts（清华大学开源软件镜像站）</a></li>
+                            <li><a href="http://www.hitsquad.com/smm/cat/SOUND_FONTS/">Sound Fonts (Hitsquad)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">API / 开放平台</a>
+                        <ul>
+                            <li><a href="https://lbs.amap.com/">高德开放平台</a></li>
+                            <li><a href="http://www.itpk.cn/robot.php">茉莉机器人 API</a></li>
+                            <li><a href="https://open.tencent.com/">腾讯开放平台</a></li>
+                            <li><a href="javascript:prompt('API','https://music.163.com/song/media/outer/url?id=音乐 ID.mp3'); void(0);">网易云音乐音频 API</a></li>
+                            <li><a href="https://open.weixin.qq.com/">微信开放平台</a></li>
+                            <li><a href="https://open.weibo.com/">新浪微博开放平台</a></li>
+                            <li><a href="https://www.xfyun.cn/">讯飞开放平台</a></li>
+                            <li><a href="https://api.imjad.cn/">AD's API</a></li>
+                            <li><a href="https://app.crisp.chat/">Crisp</a></li>
+                            <li><a href="https://open.oppomobile.com/">OPPO开放平台</a></li>
+                            <li><a href="https://valine.js.org/">Valine</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Java</a>
+                        <ul>
+                            <li><a href="http://java.52emu.cn/">52模拟器（Java 游戏和模拟器交流网站）</a></li>
+                            <li><a href="https://www.java.com/">Java (Oracle)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                        <ul>
+                            <li><a href="http://ys168.com/">永硕E盘</a></li>
+                            <li><a href="http://www.ntp.org.cn/">NTP 服务器列表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 查找面板 -->
+    <div class="search-panel">
+        <div class="search-bar">
+            <input class="search-input" type="text" placeholder="请输入关键词" onkeydown="if (event.keyCode == 13) {SearchMode = 1; searchLink();}">
+            <button class="search-submit" onclick="SearchMode = 1; searchLink();">查找</button>
+            <button class="search-cancel" onclick="SearchMode = 2; searchLink();">关闭</button>
+        </div>
+        <div class="search-result">
+            <div id="search-result-title"></div>
+            <div id="search-result-link"></div>
+        </div>
+    </div>
+    <!-- 工具面板 -->
+    <div class="tool-panel">
+        <div class="tool-panel-bar">
+            <div class="tool-panel-blank"></div>
+            <div class="tool-panel-newtab" onclick="window.open('tool.html');">新窗口</div>
+            <div class="tool-panel-close" onclick="closeToolPanel()">关闭</div>
+        </div>
+        <div class="tool-panel-iframe">
+            <iframe src="tool.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <!-- 加载中提示 -->
+    <div class="fullscreen-text">加载中...</div>
+    <!-- 悬浮栏 -->
+    <div class="floating-bar">
+        <div class="floating-bar-search" onclick="SearchPanel.style.visibility = 'visible'; SearchInput.focus();">查找</div>
+        <div class="floating-bar-tool" onclick="showToolPanel()">工具</div>
+        <div class="floating-bar-about" onclick="window.open('/');">关于</div>
+        <div class="floating-bar-totop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;">▲</div>
+    </div>
+    <!-- 底栏 -->
+    <footer>
+        <p style="text-align:center;"> 萌链·次元导航 (づ￣ 3￣)づ<br><br>
 			<a href="https://myquicklinks.vercel.app/" target="blank" title="快链-友链接力">
 				<img src="https://cdn.jsdelivr.net/gh/muzihuaner/QuickLinks@main/assets/QuickLinks.gif" alt="快链-友链接力"
 					width="120">
@@ -1016,23 +1301,13 @@
 				target="_blank"> 20212336号</a>
 			<br><br> <a>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2021 <a href="http://52hg.3vfree.com">欢哥科技</a>. All Rights Reserved.</a>
 		</p>
-	</div>
-	<script src="static/js/fingerprint2.min.js"></script>
-	<script src="static/js/jquery.min.js"></script>
-	<script src="static/js/iscroll-zoom-min.js"></script>
-	<script src="static/js/hammer.min.js"></script>
-	<script src="static/js/lrz.all.bundle.js"></script>
-	<script src="static/js/Photoclip.min.js"></script>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-	<script src="static/js/i.js"></script>
-	<script src="static/js/SmoothScroll.js"></script>
-	<script src="static/js/ripples.min.js"></script>
-	<script src="static/js/material.min.js"></script>
-	<!--看板娘-->
-	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
-	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+    </footer>
+    <!-- 背景 -->
+    <div class="page-background"></div>
+    <!-- JavaScript -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slinky.min.js"></script>
+    <script src="js/index.min.js"></script>
+   
 </body>
-
 </html>
